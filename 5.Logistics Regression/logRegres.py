@@ -33,10 +33,13 @@ def gradAscent(dataMatIn, classLabels):
     maxCycles = 500
     # 初始化权值矩阵
     weights = ones((n, 1))
+    # print(weights)
     for k in range(maxCycles):
         h = sigmoid(dataMatrix * weights)
         error = (labelMat - h)
         weights = weights + alpha * dataMatrix.transpose() * error
+    # print("h=", h)
+    # print("error", error)
     return weights
 
 
@@ -86,6 +89,7 @@ def stocGradAscent0(dataMatrix, classLabels):
         h = sigmoid(sum(dataMatrix[i] * weights))
         error = classLabels[i] - h
         weights = weights + alpha * error * dataMatrix[i]
+    print("h=", h)
     return weights
 
 
@@ -101,7 +105,7 @@ def stocGradAscent1(dataMatrix, classLabels, numIter=150):
     for j in range(numIter):
         dataIndex = list(range(m))
         for i in range(m):
-            # 学习率主键降低
+            # 学习率逐渐降低
             alpha = 4 / (1.0 + j + i) + 0.0001
             randIndex = int(random.uniform(0, len(dataIndex)))
             h = sigmoid(sum(dataMatrix[randIndex] * weights))
