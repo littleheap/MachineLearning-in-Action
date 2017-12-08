@@ -39,7 +39,7 @@ def gradAscent(dataMatIn, classLabels):
         error = (labelMat - h)
         weights = weights + alpha * dataMatrix.transpose() * error
     # print("h=", h)
-    # print("error", error)
+    # print("error=", error)
     return weights
 
 
@@ -143,7 +143,7 @@ def colicTest():
         trainingSet.append(lineArr)
         trainingLabels.append(float(currLine[21]))
     trainWeights = stocGradAscent1(array(trainingSet), trainingLabels, 1000)
-    errorCount = 0;
+    errorCount = 0
     numTestVec = 0.0
     for line in frTest.readlines():
         numTestVec += 1.0
