@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 from numpy import *
-from kNN import kNN
+import kNN
 
 # 分别获取数据矩阵和结果
 print('\n获取数据……\n')

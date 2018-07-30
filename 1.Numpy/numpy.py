@@ -14,7 +14,7 @@ invRandMat = randMat.I
 print(invRandMat)
 
 # ¾ØÕó³Ë·¨
-multi = invRandMat*randMat
+multi = invRandMat * randMat
 print(multi)
 
 # ¾ØÕó¼õ·¨
