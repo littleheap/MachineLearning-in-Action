@@ -176,4 +176,4 @@ print(centList)  # 打印3个质心结果
 
 '''
 
-clusterClubs(5)
+clusterClubs(4)
