@@ -239,13 +239,13 @@ print(Sigma)
 # 计算平方和
 Sig2 = Sigma ** 2
 
-print(sum(Sig2))
+print(sum(Sig2))  # 541.9999999999995
 
 # 取前90%
-print(sum(Sig2) * 0.9)
+print(sum(Sig2) * 0.9)  # 487.7999999999996
 
 # >90% SVD取前三个特征值
-print(sum(Sig2[:3]))
+print(sum(Sig2[:3]))  # 500.50028912757926
 
 print(recommend(myMat, 1, estMethod=svdEst))
 
